@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator Interaktif</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+    <div class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 col-lg-5">
+                <div class="card shadow">
+                    <div class="card-header bg-primary text-white text-center">
+                        <h3 class="mb-0">Kalkulator</h3>
+                    </div>
+                    <div class="card-body">
+                        <!-- Display -->
+                        <div class="bg-light p-3 mb-3 rounded">
+                            <div class="text-muted small text-end" id="expression"></div>
+                            <div class="h3 text-end mb-0" id="display">0</div>
+                        </div>
+                        
+                        <!-- Memory Display -->
+                        <div class="alert alert-warning mb-3 text-center" id="memoryDisplay" style="display: none;">
+                            Memory: <strong id="memoryValue">0</strong>
+                        </div>
+                        
+                        <!-- Memory Buttons -->
+                        <div class="row g-2 mb-2">
+                            <div class="col-3">
+                                <button class="btn btn-warning w-100" onclick="memoryAdd()">M+</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-warning w-100" onclick="memorySubtract()">M-</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-warning w-100" onclick="memoryRecall()">MR</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-warning w-100" onclick="memoryClear()">MC</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Clear Buttons -->
+                        <div class="row g-2 mb-2">
+                            <div class="col-6">
+                                <button class="btn btn-danger w-100" onclick="clearAll()">C</button>
+                            </div>
+                            <div class="col-6">
+                                <button class="btn btn-danger w-100" onclick="clearEntry()">CE</button>
+                            </div>
+                        </div>
+                        
+                        <!-- Calculator Buttons -->
+                        <div class="row g-2 mb-2">
+                            <div class="col-3">
+                                <button class="btn btn-secondary w-100" onclick="appendNumber('7')">7</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-secondary w-100" onclick="appendNumber('8')">8</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-secondary w-100" onclick="appendNumber('9')">9</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-info text-white w-100" onclick="handleOperator('÷')">÷</button>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-2 mb-2">
+                            <div class="col-3">
+                                <button class="btn btn-secondary w-100" onclick="appendNumber('4')">4</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-secondary w-100" onclick="appendNumber('5')">5</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-secondary w-100" onclick="appendNumber('6')">6</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-info text-white w-100" onclick="handleOperator('×')">×</button>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-2 mb-2">
+                            <div class="col-3">
+                                <button class="btn btn-secondary w-100" onclick="appendNumber('1')">1</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-secondary w-100" onclick="appendNumber('2')">2</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-secondary w-100" onclick="appendNumber('3')">3</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-info text-white w-100" onclick="handleOperator('-')">-</button>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-2 mb-2">
+                            <div class="col-3">
+                                <button class="btn btn-secondary w-100" onclick="appendNumber('0')">0</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-secondary w-100" onclick="appendDecimal()">.</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-info text-white w-100" onclick="handleOperator('+')">+</button>
+                            </div>
+                            <div class="col-3">
+                                <button class="btn btn-success w-100" onclick="calculate()">=</button>
+                            </div>
+                        </div>
+                        
+                        <!-- History Section -->
+                        <div class="mt-4 pt-3 border-top">
+                            <h5 class="text-primary mb-3">History Perhitungan</h5>
+                            <div id="historyList">
+                                <div class="text-muted text-center">Belum ada history</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
