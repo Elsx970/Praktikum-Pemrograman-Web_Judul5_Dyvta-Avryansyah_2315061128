@@ -4,6 +4,6 @@ NPM : 2315061128
 
 Kelas : PSTI C
 
-(https://github.com/user-attachments/assets/47543843-179f-488d-946d-7e9cebd9e18c)
+![ss1](https://github.com/user-attachments/assets/e43734be-af24-4665-bbfb-6b5f9f3c75a2)
 
-(https://github.com/user-attachments/assets/b07aa4cf-7be4-4901-8bbb-5ccd03e88fcd)
+![ss2](https://github.com/user-attachments/assets/40b8995b-b43c-43d2-ae0f-a039f42d7118)
